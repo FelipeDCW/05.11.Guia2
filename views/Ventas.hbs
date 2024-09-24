@@ -1,0 +1,15 @@
+{{!-- Paso 3 --}} 
+{{#if usuario}} 
+    <h1> Bienvenid@: {{usuario}} </h1>
+    <h3>Tus ventas hoy fueron las siguientes:</h3>
+    <ul> 
+        {{!-- Paso 4 --}} 
+        {{#each ventas}} 
+            <li>${{this}}</li> 
+        {{/each}} 
+    </ul> 
+{{/if}} 
+{{!-- Paso 5--}} 
+{{#unless usuario}}
+    <h1>Inicie sesión para ver sus ventas</h1> 
+{{/unless}}
